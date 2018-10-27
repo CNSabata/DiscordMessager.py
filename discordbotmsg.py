@@ -110,22 +110,26 @@ while 1:
                     log.write(now.strftime("%Y-%m-%d %H:%M"))
                     log.write("=================================================")
                     log.write("> "+message)
+					log.write("")
             except IOError:
                 with open(logfile, 'w+') as log:
                     log.write("File created on "+now)
                     log.write("=================================================")
                     log.write("> "+message)
+					log.write("")
         else:
             try:
                 with open(logfile + now.year + now.month + now.day + now.hour + "h" + now.minute, 'a') as log:
                     log.write(now.strftime("%Y-%m-%d %H:%M"))
                     log.write("=================================================")
                     log.write("> "+message)
+					log.write("")
             except IOError:
                 with open(logfile + now.year + now.month + now.day + now.hour + "h" + now.minute, 'w+') as log:
                     log.write("File created on "+now)
                     log.write("=================================================")
                     log.write("> "+message)
+					log.write("")
 
     elif logs == True: # If the user selected no to the log menu
         pass
