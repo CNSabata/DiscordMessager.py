@@ -62,7 +62,7 @@ if not botToken:
 # Building the URL for the JSON delivery
 baseURL = "https://discordapp.com/api/channels/{}/messages".format(channelID)
 headers = { "Authorization":"Bot {}".format(botToken),
-            "User-Agent":"DiscordBotMsg (http://falkensmaze.net, v0.1)",
+            "User-Agent":"DiscordBotMsg (http://falkensmaze.net, v0.2.0)",
             "Content-Type":"application/json", }
 
 

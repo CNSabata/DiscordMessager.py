@@ -20,7 +20,7 @@ if not botToken:
 
 baseURL = "https://discordapp.com/api/channels/{}/messages".format(channelID)
 headers = { "Authorization":"Bot {}".format(botToken),
-            "User-Agent":"DiscordBotMsg (http://falkensmaze.net, v0.1)",
+            "User-Agent":"DiscordBotMsg (http://falkensmaze.net, v0.1.0)",
             "Content-Type":"application/json", }
 
 print("Connected.")
