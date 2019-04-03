@@ -45,28 +45,49 @@ botToken = input("Token > ")    # get from the bot page. must be a bot, not a di
 
 # def on_release(key):
 #     if key == keyboard.Key.esc:
+<<<<<<< HEAD
 #         sys.exit("Error message")        
         
 # Manual settings - Placeholder for a future favorite system
 # channelID = "Uncomment and set channelID here"
 if not channelID:
 	channelID = "420993114325516288"
+=======
+#         sys.exit("Error message")
+
+# Manual settings - Placeholder for a future favorite system
+# channelID = "Uncomment and set channelID here"
+if not channelID:
+	channelID = "XXXXXXXXXXXXXXXXXX"
+>>>>>>> a755f0187c34cf781b5e94cf6c7fff7deb998167
 	print("Using default channel ID.")
 
 # botToken = "Uncomment and set botToken here"
 if not botToken:
+<<<<<<< HEAD
 	botToken = "NDE4OTIwNDM1MzU1NDg0MTcx.Dnz-xQ.r5vgdXUSP6GqR01RwjkZkJt321Q"
+=======
+	botToken = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"
+>>>>>>> a755f0187c34cf781b5e94cf6c7fff7deb998167
 	print("Using default bot token.")
 
 
 # Building the URL for the JSON delivery
 baseURL = "https://discordapp.com/api/channels/{}/messages".format(channelID)
 headers = { "Authorization":"Bot {}".format(botToken),
+<<<<<<< HEAD
             "User-Agent":"DiscordBotMsg (http://falkensmaze.net, v0.2.0)",
             "Content-Type":"application/json", }
 
 
 # Showing the user we're connected 
+=======
+            "User-Agent":"DiscordBotMsg (http://falkensmaze.net, v0.1)",
+            "Content-Type":"application/json", }
+
+
+# Showing the user we're connected
+>>>>>>> a755f0187c34cf781b5e94cf6c7fff7deb998167
 # since at this point if we have no error
 # it probably means we are
 print("Connected.")
@@ -74,7 +95,11 @@ logs = yesno.query_yes_no("Save logs to a file? (Default is N)", "no") # Asking 
 print("Starting message loop. Press ESC to quit before message is sent.")                     # Informing the user the loop has started
 
 
+<<<<<<< HEAD
 # Checking whether or not user wants logs 
+=======
+# Checking whether or not user wants logs
+>>>>>>> a755f0187c34cf781b5e94cf6c7fff7deb998167
 if logs == False:
     print("Okay, no logs.")
 
@@ -85,7 +110,11 @@ else:
 
 # Main loopy jam
 while 1:
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> a755f0187c34cf781b5e94cf6c7fff7deb998167
     getch = keymod._Getch()
     key = getch()
     if (key == '\x1b'):
@@ -110,11 +139,16 @@ while 1:
                     log.write(now.strftime("%Y-%m-%d %H:%M"))
                     log.write("=================================================")
                     log.write("> "+message)
+<<<<<<< HEAD
+=======
+					log.write("")
+>>>>>>> a755f0187c34cf781b5e94cf6c7fff7deb998167
             except IOError:
                 with open(logfile, 'w+') as log:
                     log.write("File created on "+now)
                     log.write("=================================================")
                     log.write("> "+message)
+<<<<<<< HEAD
         else:
             try:
                 with open(logfile+now.year+now.month+now.day+now.hour+"h"+now.minute, 'a') as log:
@@ -126,6 +160,22 @@ while 1:
                     log.write("File created on "+now)
                     log.write("=================================================")
                     log.write("> "+message)
+=======
+					log.write("")
+        else:
+            try:
+                with open(logfile + now.year + now.month + now.day + now.hour + "h" + now.minute, 'a') as log:
+                    log.write(now.strftime("%Y-%m-%d %H:%M"))
+                    log.write("=================================================")
+                    log.write("> "+message)
+					log.write("")
+            except IOError:
+                with open(logfile + now.year + now.month + now.day + now.hour + "h" + now.minute, 'w+') as log:
+                    log.write("File created on "+now)
+                    log.write("=================================================")
+                    log.write("> "+message)
+					log.write("")
+>>>>>>> a755f0187c34cf781b5e94cf6c7fff7deb998167
 
     elif logs == True: # If the user selected no to the log menu
         pass
